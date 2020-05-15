@@ -10,8 +10,6 @@ import pl.haladyj.RabbitMQ_intro.model.JobRequest;
 
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 @RestController
 public class PublisherMq {
@@ -43,7 +41,7 @@ public class PublisherMq {
 
         rabbitTemplate.send("file", message);
 
-        return "received";
+        return "sent";
     }
 
 }
